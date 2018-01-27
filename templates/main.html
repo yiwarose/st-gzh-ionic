@@ -1,0 +1,20 @@
+<ion-view >
+	<ion-header-bar class="bar bar-header bar-assertive">
+        <h1 class="title">个人中心</h1>
+    </ion-header-bar>
+	<ion-content ng-controller="MainCtrl">
+		<div class="card" >
+			<div class="item item-avatar">
+				<img src="{{user.fd_headimgurl}}"/>
+				<h2 class="title">{{userphone}}</h2>
+				<p>{{user.fd_nickname}}</p>
+			</div>
+			<div class="item item-text-wrap" ng-click="exit()">
+				<i class="icon ion-log-out  assertive"></i> 
+             	&nbsp;退出
+			</div>
+		</div>
+	    <ion-refresher pulling-text="下拉刷新..." on-refresh="getUser()"></ion-refresher>
+	    		
+	</ion-content>
+</ion-view>	

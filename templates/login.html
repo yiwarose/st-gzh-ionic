@@ -1,0 +1,38 @@
+<ion-view view-title="登录" class="">
+  <ion-content class="numa-bg-ef numa-content">
+			<form name="loginForm" novalidate ng-model="loginForm" method="post" accept-charset="utf-8">
+				<ion-row class="row numa-align-center">
+		          <ion-col class="col">
+		          <div class="item item-input" userInteractionEnabled="yes" enabled="yes">
+				    <i class="icon ion-iphone" ></i>
+				    <input type="number" name="handPhone" ng-model="loginData.handPhone" value="" ng-maxlength="11" ng-minlength="11" placeholder="请输入手机号" required/>&nbsp;
+				    <button class="button button-positive" ng-bind="paracont" ng-click="getValidationCode()" ng-disabled="loginForm.handPhone.$invalid|| codeDis" userInteractionEnabled="yes">
+					</button>&nbsp;
+				    
+				    </div>
+				  </ion-col>
+		      </ion-row>
+
+		      <ion-row class="row numa-align-center">
+		          <ion-col class="col">
+		          	<label class="item item-input">
+				    <i class="icon ion-key"></i>
+				    <input type="number" ng-maxlength="6" ng-minlength="6" ng-model="loginData.validationCode" name="validationCode" placeholder="请输入验证码" ng-disabled="loginForm.handPhone.$invalid" required/>
+				  </label>
+				  </ion-col>
+		      </ion-row> 		      
+
+		      <ion-row class="row">
+		          <ion-col class="col">
+		          <div>
+		          <button class="button button-full button-positive" ng-disabled="loginForm.handPhone.$invalid||loginForm.validationCode.$invalid" ng-click="submit()" >
+					  登录
+					</button>
+					</div>
+				  </ion-col>
+		      </ion-row> 
+
+
+			</form>
+			  </ion-content>
+</ion-view>

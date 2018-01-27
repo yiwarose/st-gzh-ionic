@@ -1,0 +1,33 @@
+
+.numa-start{
+
+	text-align: center;
+}
+
+.numa-start img {
+    margin-top:50px;
+    height: 128px;
+    vertical-align:middle;
+}
+.numa-bg-ef{
+
+	background-color: #efefef;
+}
+.numa-pd-top5{
+	padding-top: 5px;
+}
+.numa-margin-top-4px{margin-top:4px;}
+.numa-content{
+	
+}
+.numa-bg-white{
+	background-color: white;
+}
+.numa-align-center{text-align: center;}
+.numa-green{color:green;}
+.numa-orange{color:orange;}
+.numa-red{color:red;}
+.numa-gray{color:gray;}
+.numa-yellow{color:yellow;}
+.numa-purple{color:purple;}
+
