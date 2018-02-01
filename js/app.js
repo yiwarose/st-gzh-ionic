@@ -89,5 +89,5 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
       templateUrl: 'templates/starter.html',
       controller: 'StarterCtrl'  
   })
-  $urlRouterProvider.otherwise('/tab/home');
+  $urlRouterProvider.otherwise('/tab/home/trade');
 });
