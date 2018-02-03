@@ -60,7 +60,25 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
     		  templateUrl:'templates/exchange.html',  
     	  }
       }
-    })       
+    })  
+    .state('tabs.exchange.points', {
+      cache:false,
+      url: '/points',
+      views:{
+        'view':{
+          templateUrl:'templates/exchange.points.html', 
+        }
+      },
+    })
+    .state('tabs.exchange.query', {
+      cache:false,
+      url: '/query',
+      views:{
+        'view':{
+          templateUrl:'templates/exchange.query.html', 
+        }
+      }
+    })     
     .state('tabs.finance', {
       cache:false,
       url: '/finance',
