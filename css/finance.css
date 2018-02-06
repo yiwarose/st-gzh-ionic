@@ -1,8 +1,44 @@
-.supTab{
-	top:0;
+.balancePage{
+	text-align:center;
 }
 
-.selectTab{
-	text-decoration:none;
-	color:gray;
+.warnInfo{
+	color:#FF4500;
+	font-size:12pt;
+	font-weight:600;
+}
+
+.balanceSubPage{
+	background-color:white;
+	margin-top:20pt;
+	margin-bottom:20pt;
+}
+
+.colTitle{
+	background-color:#BEBEBE;
+	font-size:12pt;
+}
+
+.colContent{
+	background-color:white;
+	font-size:12pt;
+}
+
+.rowStyle{
+	margin-top:10pt;
+	margin-bottom:10pt;
+}
+
+.btStyle{
+	width:200pt;
+	height:30pt;
+	background-color:#FF4500;
+	border:1pt solid #FF4500;
+	border-radius:2pt;
+	color:white;
+}
+
+.inputStyle{
+	max-height:16pt;
+	margin:0 auto;
 }

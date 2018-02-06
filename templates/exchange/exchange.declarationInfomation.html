@@ -1,0 +1,100 @@
+<ion-header-bar class="bar bar-assertive">
+	<h1 class="title">申报信息</h1>
+</ion-header-bar>
+<ion-content class="backPage" ng-controller="DeclarationInfoCtrl">
+	<div class="subP marginBottom10">
+		<ul class="list">
+			<li class="item">
+				<div class="row">
+					<div class="col">
+						<div class="col-demo">申报编号</div>
+					</div>
+					<div class="col">
+						<div class="col-demo">00007638</div>
+					</div>
+				</div>
+			</li>
+			<li class="item">
+				<div class="row">
+					<div class="col">
+						<div class="col-demo">所属批次</div>
+					</div>
+					<div class="col">
+						<div class="col-demo">3.10</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="subP marginBottom10">
+		<ul class="list">
+			<li class="item">
+				<div class="row">
+					<div class="col">
+						<div class="col-demo">成交数量</div>
+					</div>
+					<div class="col">
+						<div class="col-demo">0</div>
+					</div>
+				</div>
+			</li>
+			<li class="item">
+				<div class="row">
+					<div class="col">
+						<div class="col-demo">成交金额</div>
+					</div>
+					<div class="col">
+						<div class="col-demo">0.00</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>	
+	<div class="subP marginBottom10">
+		<ul class="list">
+			<li class="item">
+				<div class="row">
+					<div class="col">
+						<div class="col-demo">申报状态</div>
+					</div>
+					<div class="col">
+						<div class="col-demo">等待成交</div>
+					</div>
+				</div>
+			</li>
+			<li class="item">
+				<div class="row">
+					<div class="col">
+						<div class="col-demo">申报时间</div>
+					</div>
+					<div class="col">
+						<div class="col-demo">2018-01-31 09:08:07</div>
+					</div>
+				</div>
+			</li>
+			<li class="item">
+				<div class="row">
+					<div class="col">
+						<div class="col-demo">申报数量</div>
+					</div>
+					<div class="col">
+						<div class="col-demo">200</div>
+					</div>
+				</div>
+			</li>
+			<li class="item">
+				<div class="row">
+					<div class="col">
+						<div class="col-demo">申报价格</div>
+					</div>
+					<div class="col">
+						<div class="col-demo">3.45</div>
+					</div>
+				</div>
+			</li>
+		</ul>	
+	</div>
+	<div class="theButton" ng-if="ifHidden" ng-click="exitThis()">
+		<button class="btStyle">撤&nbsp;单</button>
+	</div>
+</ion-content>

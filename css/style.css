@@ -13,91 +13,66 @@ input::-webkit-inner-spin-button{
     margin: 0; 
 }
 input[type="number"]{-moz-appearance:textfield;}
-
-ui-baidu-map{
-	
-	width:100%;
-	float:left;
-	
-}
 .hide{
 	display: none;
 }
-
-.smaller_txt{
-
-}
-.small_txt{
-
-}
-.red_txt{
-color:red;
-}
-.align_center{
-	text-align: center;
-}
-.align_left{
-	text-align: left;
-}
-.align_right{
-
-	text-align: right;
-}
-.report_canvas{
-
-	height:400px;
-
-}
-.tool_container{
-width:100%;
-height:60px;
-background-color:black;
-filter:alpha(opacity=10);  
-      -moz-opacity:0.1;  
-      -khtml-opacity: 0.1;  
-      opacity: 0.1; 
-}
-.site_layout_container_back{
-width:100%;
-background-color:black;
-filter:alpha(opacity=70);  
-      -moz-opacity:0.7;  
-      -khtml-opacity: 0.7;  
-      opacity: 0.7; 
-      text-align: center;
-paddiing:10px;
-
-}
-.site_layout_container{
-
-	background-image:url(/layout/layout.jpg);
-	background-position:center;
-	background-repeat: no-repeat;
-	width:600px;
-	height:400px
-	margin-right:auto;
-	margin-left:auto;
-	position: relative;
-
-}
-
-
 .yiwa-tab .tab-item.tab-item-active, .yiwa-tab.tab-item.active, .yiwa-tab .tab-item.activated {
   margin-top: -2px;
   border-style: solid;
   border-width: 2px 0 0 0;
   border-color: rgba(248, 248, 248, 0);
-  color:#387ef5;
+  color:#ef473a;
 }
-cursor: url('http://www.runoob.com/try/demo_source/finger.png'), auto;
-.small-txt{
+.background-gray{
+	background-color:#F5F5F5;
+}
+.background-white{
+  background-color: #FFFFFF;
+}
+.chart{
+  width:100%;
+  height:260px;
+}
+.block-10{
+  height:10px;
+}
+.align-center{
+  text-align: center;
+}
 
-	font-size:0.6em;
-
+.st-red{
+  color:#ef473a;
 }
-.gray-txt{
-	color:#ccc;
+.st-gray{
+  color:gray;
 }
-.red-txt{
-	color:red;
+.st-10{
+  font-size:10px;
+}
+.st-title{
+  font-size:20px;
+  height:50px;
+}
+.st-title-middle{
+  line-height:50px;
+}
+.st-row-middle{
+  line-height: 50px;
+}
+.home-price{
+  font-size:20px;
+  color:green;
+}
+.serialNumber{
+  width:18px;
+  height:18px;
+  font-size:12px;
+  background-color:#FF4500;
+  color:white;
+  text-align:center;
+  display:inline-block;
+  line-height: 18px;
+}
+.st-tab-bottom{
+  border-bottom: 1px solid #ef473a;
 }

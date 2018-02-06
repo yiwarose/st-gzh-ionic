@@ -1,0 +1,35 @@
+<ion-view>
+<ion-content class="background-gray">
+<ion-refresher
+     pulling-text="下拉刷新..."
+     on-refresh="doRefresh()">
+</ion-refresher>
+  <div class="background-white">
+	   <div class="chart background-white" echarts="searchCostOption" id="searchCost"></div>
+  </div>
+  <div class="block-10">
+  </div>
+	<div class="background-white">
+    	<div  class="title align-center st-red st-title st-title-middle">本期指数积分信息</div>
+    	<div class="row align-center">
+      		<div class="col">
+        		<div>本期预期价格</div>
+      		</div>
+      		<div class="col">
+        		<div>当日价格</div>
+      		</div>
+    	</div>
+    	<div class="row align-center">
+      		<div class="col">
+        		<div class="home-price">3.5元/个</div>
+      		</div>
+      		<div class="col">
+        		<div class="home-price">3.45元/个</div>
+      		</div>
+    	</div>
+      <div class="block-10"></div>
+	</div>
+
+</ion-content>
+</ion-view>
+

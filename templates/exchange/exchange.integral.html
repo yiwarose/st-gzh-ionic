@@ -1,0 +1,24 @@
+<ion-view>
+<ion-content class="background-gray">
+<ion-refresher
+     pulling-text="下拉刷新..."
+     on-refresh="doRefresh()">
+</ion-refresher>
+<ion-list ng-controller="IntegralCtrl">
+ <ion-item href="#/exchangeInfomation/id">
+ 			<div class="row">
+ 				<div class="col col-10 st-row-middle">
+					<i class="serialNumber">1</i>
+				</div>
+				<div class="col col-80">
+					<h2>积分批次 <i class="st-red">00000850</i></h2>
+					<div class="st-gray st-10">批次编号 042557 可兑换数量 14</div>
+				</div> 
+				<div class="col col-10 st-row-middle">
+					<i class="icon ion-ios-arrow-forward"></i>
+				</div>
+			</div>
+ </ion-item>
+</ion-list>
+</ion-content>
+</ion-view>

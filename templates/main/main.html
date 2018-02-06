@@ -1,0 +1,100 @@
+<ion-view class="backPage" ng-controller="MainCtrl">
+	<ion-header-bar class="bar bar-header bar-assertive">
+        <h1 class="title">个人中心</h1>
+        <button class="button icon ion-gear-a" ng-click="openSetup()"></button>
+    </ion-header-bar>
+	<ion-content>
+		<div class="card">
+			<div class="backPic">
+				<div class="theCenter">
+					<img class="portrait marginTop20" src="{{img}}" ng-click="openLogin()"/>
+					<div class="marginTop10">{{nameInfo}}</div>
+				</div>
+			</div>
+			<div class="row tableStyle">
+      			<div class="col paddingTop10">
+        			<div class="col-demo color1 paddingBottom10">0.00</div>
+        			<div class="col-demo paddingBottom10">消费指数积分</div>
+      			</div>
+      			<div class="col paddingTop10">
+        			<div class="col-demo color1 paddingBottom10">0.00</div>
+        			<div class="col-demo paddingBottom10">可兑换积分</div>
+      			</div>
+      			<div class="col paddingTop10">
+        			<div class="col-demo color1 paddingBottom10">0.00</div>
+        			<div class="col-demo paddingBottom10">恒量积分</div>
+      			</div>
+    		</div>
+    		<div class="row tableStyle paddingTop20">
+      			<div class="col  paddingTop10">
+        			<div class="col-demo color2">0.00</div>
+        			<div class="col-demo">元/个</div>
+        			<div class="col-demo paddingBottom10">当日积分价格</div>
+      			</div>
+      			<div class="col  paddingTop10">
+        			<div class="col-demo color2">0.00</div>
+        			<div class="col-demo">元</div>
+        			<div class="col-demo paddingBottom10">可兑换金额</div>
+      			</div>
+      			<div class="col  paddingTop10">
+        			<div class="col-demo color2">0.00</div>
+        			<div class="col-demo">元</div>
+        			<div class="col-demo paddingBottom10">可提现金额</div>
+      			</div>
+    		</div>   
+		</div>
+	    <ion-refresher pulling-text="下拉刷新..." on-refresh="getUser()"></ion-refresher>
+    	<div class="theList">
+    		<ul class="list">
+    			<li class="item" ng-click="openListPage(0)">
+    				<div class="row">
+    					<div class="col col-80">
+    						<div class="col-demo">当日信息</div>
+    					</div>
+    					<div class="col col-20 iconStyle">
+    						<div class="col-demo">
+    							>
+    						</div>
+    					</div>
+    				</div>
+    			</li>
+    			<li class="item" ng-click="openListPage(1)">
+    				<div class="row">
+    					<div class="col col-80">
+    						<div class="col-demo">累计账户信息</div>
+    					</div>
+    					<div class="col col-20 iconStyle">
+    						<div class="col-demo">
+    							>
+    						</div>
+    					</div>
+    				</div>
+    			</li>
+    			<li class="item" ng-click="openListPage(2)">
+    				<div class="row">
+    					<div class="col col-80">
+    						<div class="col-demo">服务关系</div>
+    					</div>
+    					<div class="col col-20 iconStyle">
+    						<div class="col-demo">
+    							>
+    						</div>
+    					</div>
+    				</div>
+    			</li>
+    			<li class="item" ng-click="openListPage(3)">
+    				<div class="row">
+    					<div class="col col-80">
+    						<div class="col-demo">关于我们</div>
+    					</div>
+    					<div class="col col-20 iconStyle">
+    						<div class="col-demo">
+    							>
+    						</div>
+    					</div>
+    				</div>
+    			</li>
+    		</ul>
+    	</div>		
+	</ion-content>
+</ion-view>	

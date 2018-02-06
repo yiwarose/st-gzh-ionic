@@ -1,0 +1,112 @@
+.tableStyle{
+	text-align:center;
+	font-size:12pt;
+	width:80%;
+	height:100pt;
+}
+
+.color1{
+	color:#EE9A00;
+}
+
+.color2{
+	color:#3CB371;
+}
+
+.color3{
+	color:#FF4500;
+}
+
+.backPic{
+	background-image: url("../img/background.png");
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+	background-size: cover;
+}
+
+.tabSub{
+	width:100%;
+}
+
+.theCenter{
+	width:150pt;
+	height:150pt;
+	margin:0 auto;
+	text-align:center;
+	color:white;
+	font-size:12pt;
+}
+
+.portrait{
+	width:80pt;
+	height:80pt;
+	border-radius:50%;
+}
+
+.theList{
+	margin:10px 10px;
+}
+
+.logoHeader{
+	width:150pt;
+	margin:20pt auto;
+	text-align:center;
+}
+
+.logoPic{
+	width:100pt;
+	height:100pt;
+}
+
+.logoFont{
+	color:#FF4500;
+	font-size:12pt;
+	font-weight:600;
+}
+
+.introduction{
+	width:80%;
+	margin:0 auto;
+	font-size:12pt;
+}
+
+.QQ{
+	width:90%;
+	margin:20pt auto;
+	text-align:center;
+	font-size:12pt;
+	padding-top:10pt;
+	padding-bottom:10pt;
+	border-radius:10pt;;
+}
+
+.listFont{
+	font-size:12pt;
+}
+
+.setupPage{
+	text-align:center;
+}
+
+.password{
+	background-color:#EDEDED;
+	width:90%;
+	height:40pt;
+	margin:0 auto;
+	margin-top:10pt;
+	margin-bottom:10pt;
+}
+
+.loginPage{
+	text-align:center;
+	font-size:12pt;
+}
+
+.right{
+	text-align:right;
+}
+
+.backColor{
+	background-color:#F5F5F5;
+}

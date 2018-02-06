@@ -1,8 +1,122 @@
-﻿.supTab{
-	top:0;
+.paddingTop10{
+	padding-top:10pt;
 }
 
-.selectTab{
-	text-decoration:none;
-	color:gray;
+.paddingTop20{
+	padding-top:20pt;
+}
+
+.paddingTop40{
+	padding-top:40pt;
+}
+
+.paddingTop80{
+	padding-top:80pt;
+}
+
+.paddingBottom10{
+	padding-bottom:10pt;
+}
+
+.paddingBottom20{
+	padding-bottom:20pt;
+}
+
+.paddingBottom40{
+	padding-bottom:40pt;
+}
+
+.paddingBottom80{
+	padding-bottom:80pt;
+}
+
+.marginTop10{
+	margin-top:10pt;
+}
+
+.marginTop20{
+	margin-top:20pt;
+}
+
+.marginTop40{
+	margin-top:40pt;
+}
+
+.marginTop80{
+	margin-top:80pt;
+}
+
+.marginBottom10{
+	margin-bottom:10pt;
+}
+
+.marginBottom20{
+	margin-bottom:20pt;
+}
+
+.marginBottom40{
+	margin-bottom:40pt;
+}
+
+.marginBottom80{
+	margin-bottom:80pt;
+}
+
+.backPage{
+	background-color:#F5F5F5;
+}
+
+.homeSubPage1{
+	background-color:white;
+	width:100%;
+}
+
+.homeSubPage2{
+	background-color:white;
+	text-align:center;
+	height:200px;
+}
+
+.homeSubPage3{
+	background-color:white;
+}
+
+.homeSubPage4{
+	background-color:white;
+	text-align:center;
+}
+
+.tit1{
+	color:#FF4500;
+	font-size:15pt;
+	font-weight:600;
+}
+
+.tit2{
+	font-size:12pt;
+}
+
+.tit3{
+	font-size:12pt;
+	font-weight:600;
+}
+
+.prices{
+	font-size:18pt;
+	color:#32CD32;
+	font-weight:500;
+}
+
+.listContent{
+	font-size:12pt;
+}
+
+.theDivider{
+	border-bottom:1px solid #DCDCDC;
+}
+
+.theLineChart{
+	width:90%;
+	height:200pt;
+	margin:0 auto;
 }
