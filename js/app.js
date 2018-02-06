@@ -13,6 +13,12 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
 
   });
 
+  $rootScope.goBack=function(){
+
+      $ionicHistory.goBack();
+
+    };
+
 })
 .config(function($stateProvider, $urlRouterProvider,$locationProvider,$ionicConfigProvider) {
 
