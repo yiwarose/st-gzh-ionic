@@ -1,6 +1,6 @@
 angular.module('GZH', ['ionic', 'GZH.controllers'])
 .constant('APIURL', 'http://www.st-it.cn/index.php/api/')
-.run(function($ionicPlatform,$rootScope,$ionicLoading,$ionicHistory) {
+.run(function($ionicPlatform,$rootScope,$ionicLoading,$ionicHistory,$state) {
   $ionicPlatform.ready(function() {
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -19,10 +19,24 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
 
     };
 
+  $rootScope.goTo=function(url){
+
+    //console.log(url);
+
+    $state.go(url);
+  }
+
+  $rootScope.doRefresh=function(){
+
+    $rootScope.$broadcast('scroll.refreshComplete');
+
+  }
+
 })
 .config(function($stateProvider, $urlRouterProvider,$locationProvider,$ionicConfigProvider) {
 
   $ionicConfigProvider.tabs.position("bottom");
+  $ionicConfigProvider.views.maxCache(0);
   //$ionicConfigProvider.platform.android.navBar.alignTitle("center");
   //$ionicConfigProvider.platform.ios.navBar.alignTitle("center"); 
 
@@ -72,58 +86,58 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
     	  }
       }
     })     
-    .state('tabs.exchange.integral', {
+    .state('tabs.exchange.batch', {
       cache:false,
-      url: '/integral',
+      url: '/batch',
       controller:'IntegralCtrl',
       views:{
         'exchange-view':{
-          templateUrl:'templates/exchange/exchange.integral.html', 
+          templateUrl:'templates/exchange/exchange.batch.html', 
         }
       }
     })
-    .state('exchangeInfomation', {
+    .state('batchInfo', {
       cache:false,
-      url: '/exchangeInfomation/:id',
-      controller:'ExchangeInfoCtrl',
-      templateUrl:'templates/exchange/exchange.exchangeInfomation.html'
+      url: '/batchInfo/:id',
+      controller:'BatchInfoCtrl',
+      templateUrl:'templates/exchange/exchange.batchInfo.html'
     })
-    .state('tabs.exchange.declaration', {
+    .state('tabs.exchange.query', {
       cache:false,
-      url: '/declaration',
+      url: '/query',
       controller:'DeclarationCtrl',
       views:{
         'exchange-view':{
-          templateUrl:'templates/exchange/exchange.declaration.html', 
+          templateUrl:'templates/exchange/exchange.query.html', 
         }
       }
-    })
-    .state('tabs.exchange.declaration.dealing', {
+    })/*
+    .state('tabs.exchange.query.undone', {
       cache:false,
-      url: '/dealing',
+      url: '/undone',
       controller:'DealingCtrl',
       views:{
         'exchange-sub-view':{
-          templateUrl:'templates/exchange/exchange.declaration.dealing.html', 
+          templateUrl:'templates/exchange/exchange.undone.html', 
         }
       }
     }) 
-    .state('tabs.exchange.declaration.record', {
+    .state('tabs.exchange.query.history', {
       cache:false,
       url: '/record',
       controller:'RecordCtrl',
       views:{
         'exchange-sub-view':{
-          templateUrl:'templates/exchange/exchange.declaration.record.html', 
+          templateUrl:'templates/exchange/exchange.history.html', 
         }
       }
-    })
-    .state('declarationInfomation', {
+    })*/
+    .state('declarationInfo', {
       cache:false,
-    	params:{"ifHidden":null},
-      	url: '/declarationInfomation',
+    	//params:{"ifHidden":null},
+      	url: '/declarationInfomation/:id',
       	controller:'DeclarationInfoCtrl',
-      	templateUrl:'templates/exchange/exchange.declarationInfomation.html'
+      	templateUrl:'templates/exchange/exchange.declarationInfo.html'
     })
     .state('tabs.finance', {
       cache:false,
@@ -152,7 +166,7 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
     		  templateUrl:'templates/finance/finance.detail.html', 
     	  }
       }
-    }) 
+    })/*
     .state('tabs.finance.detail.auditing', {
       cache:false,
       url: '/auditing',
@@ -170,7 +184,7 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
     		  templateUrl:'templates/finance/finance.detail.audited.html', 
     	  }
       }
-    }) 
+    })*/
     .state('tabs.main', {
       cache:false,
       url: '/main',

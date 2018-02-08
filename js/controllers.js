@@ -7,16 +7,18 @@
 })
 .controller('HomeCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal,$state) {
 	//$state.go("tabs.home.trade");
-    $scope.doRefresh = function(){
+    /*$scope.doRefresh = function(){
         $scope.$broadcast('scroll.refreshComplete');
-    };
+    };*/
 })
 .controller('IntegralCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal,$state) {
 	//$scope.openSubPage = function(){
 	//	$state.go("exchangeInfomation");
 	//}
 })
-.controller('ExchangeInfoCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal) {
+.controller('BatchInfoCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal,$state) {
+
+    
 	
 })
 .controller('DeclarationCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal,$state) {
@@ -87,7 +89,7 @@
 	$scope.openSetup = function(){
 		$state.go("setup");
 	};
-	$scope.openListPage = function(param){
+	/*$scope.openListPage = function(param){
 		if(param == 0){
 			$state.go("dailyInfo");
 		}else if(param == 1){
@@ -97,7 +99,7 @@
 		}else if(param == 3){
 			$state.go("aboutUs");
 		}
-	}
+	}*/
  })
  .factory('$echartsConfig', function () {
      return {

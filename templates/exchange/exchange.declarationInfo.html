@@ -1,7 +1,9 @@
-<ion-header-bar class="bar bar-assertive">
+<ion-header-bar class="bar-assertive" align-title="center">
+	<button class="button button-clear" ui-sref="tabs.exchange.declaration.dealing"><i class="icon ion-ios-arrow-left"></i></button>
 	<h1 class="title">申报信息</h1>
 </ion-header-bar>
-<ion-content class="backPage" ng-controller="DeclarationInfoCtrl">
+<ion-view>
+<ion-content class="background-gray" ng-controller="DeclarationInfoCtrl">
 	<div class="subP marginBottom10">
 		<ul class="list">
 			<li class="item">
@@ -98,3 +100,4 @@
 		<button class="btStyle">撤&nbsp;单</button>
 	</div>
 </ion-content>
+</ion-view>

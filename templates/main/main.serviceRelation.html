@@ -1,64 +1,32 @@
 <ion-header-bar class="bar bar-header bar-assertive">
+<button class="button button-clear" ng-click="goTo('tabs.main')"><i class="icon ion-ios-arrow-left"></i></button>
     <h1 class="title">服务关系</h1>
 </ion-header-bar>
-<ion-content class="backPage">
-	<ul class="list">
-		<li class="item" ng-click="openSubPage(1)">
-			<div class="row">
-				<div class="col col-10">
-					<div class="col-demo"></div>
-				</div>
-				<div class="col col-50">
-					<div class="col-demo">我的服务人</div>
-				</div>
-				<div class="col col-40">
-					<div class="col-demo">
-						<i class="{{icon1}}"></i>
-					</div>
-				</div>
-			</div>	
-		</li>
-		<li class="item backColor" ng-if="val1">
-			<div class="row">
-				<div class="col col-10">
-					<div class="col-demo"></div>
-				</div>
-				<div class="col col-30">
-					<div class="col-demo">蒋红梅</div>
-				</div>
-				<div class="col col-60">
-					<div class="col-demo">电话:xxxxxxxxxxx</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col col-10">
-					<div class="col-demo"></div>
-				</div>
-				<div class="col col-30">
-					<div class="col-demo">孙海银</div>
-				</div>
-				<div class="col col-60">
-					<div class="col-demo">电话:xxxxxxxxxxx</div>
-				</div>
-			</div>
-		</li>
-		<li class="item" ng-click="openSubPage(2)">
-			<div class="row">
-				<div class="col col-10">
-					<div class="col-demo"></div>
-				</div>
-				<div class="col col-50">
-					<div class="col-demo">我服务的人</div>
-				</div>
-				<div class="col col-40">
-					<div class="col-demo">
-						<i class="{{icon2}}"></i>
-					</div>
-				</div>
-			</div>	
-		</li>
-		<li class="item backColor" ng-if="val2">
-			<div class="color3">暂无</div>
-		</li>
-	</ul>
+<ion-view>
+<ion-content class="st-background-gray">
+	<div class="list">
+		<div class="item item-icon-right st-font-10">
+			我的服务人
+		</div>
+		<div class="item item-icon-right st-font-10 st-gray">
+			xxx
+			<span class="item-note">133**</span>
+		</div>
+		<div class="item item-icon-right st-font-10 st-gray">
+			xxx
+			<span class="item-note">136**</span>
+		</div>
+		<div class="item item-icon-right st-font-10">
+			我服务的人
+		</div>
+		<div class="item item-icon-right st-font-10 st-gray">
+			xxx
+			<span class="item-note">133**</span>
+		</div>
+		<div class="item item-icon-right st-font-10 st-gray">
+			xxx
+			<span class="item-note">136**</span>
+		</div>
+	</div>
 </ion-content>
+</ion-view>

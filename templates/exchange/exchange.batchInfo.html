@@ -1,0 +1,119 @@
+<ion-header-bar class="bar-assertive" align-title="center">
+	<button class="button button-clear" ng-click="goTo('tabs.exchange.batch');"><i class="icon ion-ios-arrow-left"></i></button>
+	<h1 class="title">兑换信息</h1>
+</ion-header-bar>
+<ion-view> 
+<ion-content class="st-background-gray" ng-controller="BatchInfoCtrl">
+	<div class="st-block-10"></div>
+	<div class="row">
+		<div class="col col-50 st-align-right st-gray">
+			积分批次
+		</div>
+		<div class="col col-25">
+			00000800
+		</div>
+		<div class="col col-25">
+			<div class="st-radius st-align-center st-gray">当前批次</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-50 st-align-right st-gray">
+			初始价格
+		</div>
+		<div class="col col-25">
+			3.25
+		</div>
+		<div class="col col-25">
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-50 st-align-right st-gray">
+			消费指数积分数
+		</div>
+		<div class="col col-25">
+			270
+		</div>
+		<div class="col col-25">
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-50 st-align-right st-gray">
+			原始消费指数积分数
+		</div>
+		<div class="col col-25">
+			288
+		</div>
+		<div class="col col-25">
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-50 st-align-right st-gray">
+			当日已成交积分数
+		</div>
+		<div class="col col-25">
+			0
+		</div>
+		<div class="col col-25">
+			<div class="st-radius st-align-center st-gray">已成交</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-50 st-align-right st-gray">
+			待成交积分数
+		</div>
+		<div class="col col-25">
+			0
+		</div>
+		<div class="col col-25">
+			<div class="st-radius st-align-center st-gray">待成交</div>
+		</div>
+	</div>
+	<div class="st-block-10 st-background-gray"></div>
+	<div class="row st-background-white">
+		<div class="col col-50 st-align-right st-red">
+			恒量可兑换积分数
+		</div>
+		<div class="col col-25">
+			18
+		</div>
+		<div class="col col-25">
+			
+		</div>
+	</div>
+	<div class="row st-background-white">
+		<div class="col col-50 st-align-right st-orange">
+			当日还可兑换积分数
+		</div>
+		<div class="col col-25">
+			18
+		</div>
+		<div class="col col-25">
+			<div class="st-radius st-align-center st-gray">剩余</div>
+		</div>
+	</div>
+	<div class="list st-background-white">
+		  <div class="item item-input item-select">
+		    <div class="input-label st-font-10">
+		      兑出价格
+		    </div>
+		    <select>
+		      <option>Blue</option>
+		      <option selected="">Green</option>
+		      <option>Red</option>
+		    </select>
+		  </div>
+		  <div class="item item-input">
+		    <div class="input-label st-font-10">
+		      兑出数量
+		    </div>
+		    <input type="text" placeholder="请输入兑出数量"/>
+		  </div>
+		  <div class="item st-border-bottom-none">
+		  	<button class="button button-block button-assertive">兑换</button>
+		  </div>
+	</div>
+</ion-content>
+</ion-view>

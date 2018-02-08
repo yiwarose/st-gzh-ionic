@@ -1,19 +1,24 @@
 <ion-header-bar class="bar bar-header bar-assertive">
+<button class="button button-clear" ng-click="goTo('setup')"><i class="icon ion-ios-arrow-left"></i></button>
     <h1 class="title">修改密码</h1>
 </ion-header-bar>
-<ion-content class="backPage">
+<ion-view>
+<ion-content class="st-background-gray">
 	<form name="modifyForm" novalidate ng-model="modifyForm" method="post" accept-charset="utf-8">
-		<div class="setupPage paddingTop20">
-			<div class="marginBottom20">
-				<input type="text" placeholder="请输入原密码!" class="password"/>
+		<div class="list">
+			<div class="item item-input">
+				<input type="text" placeholder="请输入原密码" class="password"/>
 			</div>
-			<div class="marginBottom20">
-				<input type="text" placeholder="请输入新密码!" class="password"/>
+			<div class="item item-input">
+				<input type="text" placeholder="请输入新密码" class="password"/>
 			</div>
-			<div class="marginBottom20">
-				<input type="text" placeholder="请确认新密码!" class="password"/>
+			<div class="item item-input">
+				<input type="text" placeholder="请确认新密码" class="password"/>
 			</div>
-			<button class="btStyle marginTop10">确认修改</button>
+			<div class="item st-border-bottom-none">
+		  	   <button class="button button-block button-assertive">确认修改</button>
+        	</div>
 		</div>
 	</form>
 </ion-content>
+</ion-view>

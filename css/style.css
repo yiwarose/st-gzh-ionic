@@ -23,31 +23,58 @@ input[type="number"]{-moz-appearance:textfield;}
   border-color: rgba(248, 248, 248, 0);
   color:#ef473a;
 }
-.background-gray{
+.home-price{
+  font-size:20px;
+  color:green;
+}
+.st-badge{
+  width:20px;
+  height:20px;
+  font-size:12px;
+  background-color:#FF4500;
+  color:white;
+  text-align:center;
+  display:inline-block;
+  line-height: 18px;
+  border-radius: 50%;
+}
+.st-background-gray{
 	background-color:#F5F5F5;
 }
-.background-white{
+.st-background-white{
   background-color: #FFFFFF;
 }
 .chart{
   width:100%;
   height:260px;
 }
-.block-10{
+.st-block-10{
   height:10px;
 }
-.align-center{
-  text-align: center;
+.st-block-20{
+  height:20px;
 }
-
 .st-red{
   color:#ef473a;
 }
 .st-gray{
   color:gray;
 }
-.st-10{
+.st-black{
+  color:black;
+}
+.st-white{
+  color:white;
+}
+.st-orange{
+  color:orange;
+}
+.st-green{
+  color:green;
+}
+.st-font-10{
   font-size:10px;
+  font-size:0.5em;
 }
 .st-title{
   font-size:20px;
@@ -59,20 +86,51 @@ input[type="number"]{-moz-appearance:textfield;}
 .st-row-middle{
   line-height: 50px;
 }
-.home-price{
-  font-size:20px;
-  color:green;
-}
-.serialNumber{
-  width:18px;
-  height:18px;
-  font-size:12px;
-  background-color:#FF4500;
-  color:white;
-  text-align:center;
-  display:inline-block;
-  line-height: 18px;
-}
 .st-tab-bottom{
   border-bottom: 1px solid #ef473a;
+}
+.st-margin-top-10{
+  margin-top:10px
+}
+
+.st-align-right{
+  text-align: right;
+}
+.st-align-center{
+  text-align: center;
+}
+.st-center{
+  margin-left: auto;
+  margin-right: auto;
+}
+.st-radius{
+  border:1px solid gray;
+  border-radius: 5px;
+  display: inline-block;
+  padding-left:2px;
+  padding-right:2px;
+}
+.st-width-90{
+  width:90%;
+}
+.st-border-bottom-none{
+  border-bottom:none;
+}
+.st-circle-pic{
+  border-radius: 50%;
+}
+.main-background-pic{
+  background-image: url("../img/background.png");
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+  background-size: cover;
+}
+.st-pic-square100{
+  width:100px;
+  height:100px;
+}
+.st-text-indent2{
+  text-indent: 26px;
+  text-align:justify;
 }

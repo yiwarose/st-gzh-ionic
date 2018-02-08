@@ -1,77 +1,52 @@
 <ion-header-bar class="bar bar-header bar-assertive">
+	<button class="button button-clear" ng-click="goTo('tabs.main')"><i class="icon ion-ios-arrow-left"></i></button>
     <h1 class="title">累计账户信息</h1>
 </ion-header-bar>
-<ion-content class="backPage">
-	<ul class="list">
-		<li class="item">
-			<div class="row">
-				<div class="col col-80">
-					<div class="col-demo">累计兑出数量(个)</div>
-				</div>
-				<div class="col col-20">
-					<div class="col-demo">0.00</div>
-				</div>
-			</div>
-		</li>
-		<li class="item">
-			<div class="row">
-				<div class="col col-80">
-					<div class="col-demo">累计兑换金额(元)</div>
-				</div>
-				<div class="col col-20">
-					<div class="col-demo">0.00</div>
-				</div>
-			</div>
-		</li>
-		<li class="item">
-			<div class="row">
-				<div class="col col-80">
-					<div class="col-demo">累计手续费(元)</div>
-				</div>
-				<div class="col col-20">
-					<div class="col-demo">0.00</div>
-				</div>
-			</div>
-		</li>
-		<li class="item">
-			<div class="row">
-				<div class="col col-80">
-					<div class="col-demo">累计代扣税(元)</div>
-				</div>
-				<div class="col col-20">
-					<div class="col-demo">0.00</div>
-				</div>
-			</div>
-		</li>
-		<li class="item">
-			<div class="row">
-				<div class="col col-80">
-					<div class="col-demo">累计提现金额(元)</div>
-				</div>
-				<div class="col col-20">
-					<div class="col-demo">0.00</div>
-				</div>
-			</div>
-		</li>
-		<li class="item">
-			<div class="row">
-				<div class="col col-80">
-					<div class="col-demo">累计申报提现(元)</div>
-				</div>
-				<div class="col col-20">
-					<div class="col-demo">0.00</div>
-				</div>
-			</div>
-		</li>
-		<li class="item">
-			<div class="row">
-				<div class="col col-80">
-					<div class="col-demo">可提现金额(元)</div>
-				</div>
-				<div class="col col-20">
-					<div class="col-demo">0.00</div>
-				</div>
-			</div>
-		</li>
-	</ul>
+<ion-view>
+<ion-content class="st-background-gray">
+	<div class="list">
+		<div class="item st-font-10">
+				累计兑出数量(个)
+				<span class="item-note st-black st-font-10">
+            		0
+          		</span>
+		</div>
+		<div class="item st-font-10">
+				累计兑换金额(元)
+				<span class="item-note st-black st-font-10">
+            		100.00
+          		</span>
+		</div>
+		<div class="item st-font-10">
+				累计手续费(元)
+				<span class="item-note st-black st-font-10">
+            		983.00
+          		</span>
+		</div>
+		<div class="item st-font-10">
+				累计代扣税(元)
+				<span class="item-note st-black st-font-10">
+            		200.00
+          		</span>
+		</div>
+		<div class="item st-font-10">
+				累计提现金额(元)
+				<span class="item-note st-black st-font-10">
+            		0.00
+          		</span>
+		</div>
+		<div class="item st-font-10">
+				累计申报提现(元)
+				<span class="item-note st-black st-font-10">
+            		0.00
+          		</span>
+		</div>
+		<div class="item st-font-10">
+				可提现金额(元)
+				<span class="item-note st-black st-font-10">
+            		0.00
+          		</span>
+		</div>
+	</div>
 </ion-content>
+</ion-view>

@@ -1,100 +1,71 @@
-<ion-view class="backPage" ng-controller="MainCtrl">
-	<ion-header-bar class="bar bar-header bar-assertive">
+
+	  <ion-header-bar class="bar bar-header bar-assertive">
         <h1 class="title">个人中心</h1>
-        <button class="button icon ion-gear-a" ng-click="openSetup()"></button>
+        <button class="button button-clear st-font-10 button-small icon ion-gear-a" ng-click="goTo('setup')"></button>
     </ion-header-bar>
+    <ion-view class="st-background-gray" ng-controller="MainCtrl">
 	<ion-content>
+    <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>
 		<div class="card">
-			<div class="backPic">
-				<div class="theCenter">
-					<img class="portrait marginTop20" src="{{img}}" ng-click="openLogin()"/>
-					<div class="marginTop10">{{nameInfo}}</div>
+			<div class="main-background-pic">
+        <div class="st-block-10"></div>
+				<div class="st-align-center">
+					<img class="st-circle-pic" src="{{img}}" ng-click="openLogin()"/>
+					<div class="st-white">{{nameInfo}}</div>
 				</div>
+        <div class="st-block-10"></div>
 			</div>
-			<div class="row tableStyle">
-      			<div class="col paddingTop10">
-        			<div class="col-demo color1 paddingBottom10">0.00</div>
-        			<div class="col-demo paddingBottom10">消费指数积分</div>
+			<div class="row">
+      			<div class="col col-33 st-align-center">
+        			<i class="st-block st-orange">0.00</i><br/>
+        			<i class="st-block st-gray">消费指数积分</i>
       			</div>
-      			<div class="col paddingTop10">
-        			<div class="col-demo color1 paddingBottom10">0.00</div>
-        			<div class="col-demo paddingBottom10">可兑换积分</div>
+      			<div class="col col-33 st-align-center">
+              <i class="st-block st-orange">0.00</i><br/>
+              <i class="st-block st-gray">可兑换积分</i>
       			</div>
-      			<div class="col paddingTop10">
-        			<div class="col-demo color1 paddingBottom10">0.00</div>
-        			<div class="col-demo paddingBottom10">恒量积分</div>
+      			<div class="col col-33 st-align-center">
+              <i class="st-block st-orange">0.00</i><br/>
+              <i class="st-block st-gray">恒量积分</i>
       			</div>
-    		</div>
-    		<div class="row tableStyle paddingTop20">
-      			<div class="col  paddingTop10">
-        			<div class="col-demo color2">0.00</div>
-        			<div class="col-demo">元/个</div>
-        			<div class="col-demo paddingBottom10">当日积分价格</div>
-      			</div>
-      			<div class="col  paddingTop10">
-        			<div class="col-demo color2">0.00</div>
-        			<div class="col-demo">元</div>
-        			<div class="col-demo paddingBottom10">可兑换金额</div>
-      			</div>
-      			<div class="col  paddingTop10">
-        			<div class="col-demo color2">0.00</div>
-        			<div class="col-demo">元</div>
-        			<div class="col-demo paddingBottom10">可提现金额</div>
-      			</div>
-    		</div>   
+    	</div>
+      <div class="row">
+            <div class="col col-33 st-align-center">
+              <i class="st-block st-green">0.00</i><br/>
+              <i class="st-block st-gray">元/个</i><br/>
+              <i class="st-block st-gray">当日积分价格</i>
+            </div>
+            <div class="col col-33 st-align-center">
+              <i class="st-block st-green">0.00</i><br/>
+              <i class="st-block st-gray">元</i><br/>
+              <i class="st-block st-gray">可兑换金额</i>
+            </div>
+            <div class="col col-33 st-align-center">
+              <i class="st-block st-green">0.00</i><br/>
+              <i class="st-block st-gray">元</i><br/>
+              <i class="st-block st-gray">可提现金额</i>
+            </div>
+      </div>
 		</div>
-	    <ion-refresher pulling-text="下拉刷新..." on-refresh="getUser()"></ion-refresher>
-    	<div class="theList">
-    		<ul class="list">
-    			<li class="item" ng-click="openListPage(0)">
-    				<div class="row">
-    					<div class="col col-80">
-    						<div class="col-demo">当日信息</div>
-    					</div>
-    					<div class="col col-20 iconStyle">
-    						<div class="col-demo">
-    							>
-    						</div>
-    					</div>
-    				</div>
-    			</li>
-    			<li class="item" ng-click="openListPage(1)">
-    				<div class="row">
-    					<div class="col col-80">
-    						<div class="col-demo">累计账户信息</div>
-    					</div>
-    					<div class="col col-20 iconStyle">
-    						<div class="col-demo">
-    							>
-    						</div>
-    					</div>
-    				</div>
-    			</li>
-    			<li class="item" ng-click="openListPage(2)">
-    				<div class="row">
-    					<div class="col col-80">
-    						<div class="col-demo">服务关系</div>
-    					</div>
-    					<div class="col col-20 iconStyle">
-    						<div class="col-demo">
-    							>
-    						</div>
-    					</div>
-    				</div>
-    			</li>
-    			<li class="item" ng-click="openListPage(3)">
-    				<div class="row">
-    					<div class="col col-80">
-    						<div class="col-demo">关于我们</div>
-    					</div>
-    					<div class="col col-20 iconStyle">
-    						<div class="col-demo">
-    							>
-    						</div>
-    					</div>
-    				</div>
-    			</li>
-    		</ul>
-    	</div>		
+        <div class="st-block-10"></div>
+        <ion-list>
+            <ion-item href="#/dailyInfo" class="item-icon-right st-font-10 st-gray">
+                当日消息
+                <i class="icon ion-ios-arrow-right st-gray"></i>
+            </ion-item>
+            <ion-item href="#/accountInfo" class="item-icon-right  st-font-10 st-gray">
+                累计账户信息
+                <i class="icon ion-ios-arrow-right st-gray"></i>
+            </ion-item>
+            <ion-item href="#/serviceRelation" class="item-icon-right  st-font-10 st-gray">
+                服务关系
+                <i class="icon ion-ios-arrow-right st-gray"></i>
+            </ion-item>
+            <ion-item href="#/aboutUs" class="item-icon-right st-font-10 st-gray">
+                关于我们
+                <i class="icon ion-ios-arrow-right st-gray"></i>
+            </ion-item>
+        </ion-list>		
+        <div class="st-block-10"></div>
 	</ion-content>
 </ion-view>	
