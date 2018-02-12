@@ -3,7 +3,7 @@
    		<h1 class="title">升腾积分平台</h1>
 	</ion-header-bar>
 	<ion-view view-title="登录" class="">
-  	<ion-content class="st-background-gray">
+  	<ion-content class="st-background-white">
 		<form name="loginForm" novalidate ng-model="loginForm" method="post" accept-charset="utf-8">
 			<div class="list">
 				<div class="item item-input">
@@ -16,7 +16,7 @@
 					<input type="password" name="code" ng-model="loginData.code" ng-maxlength="6" ng-minlength="6" placeholder="请输入验证码" class="password" required/>
 				</div>
 				<div class="item st-border-bottom-none">
-		  			<button class="button button-block button-assertive" ng-disabled="loginForm.handPhone.$invalid||loginForm.code.$invalid" ng-click="submit()">登录</button>
+		  			<button class="button button-block button-assertive" ng-disabled="loginForm.handPhone.$invalid||loginForm.code.$invalid||loginDis" ng-click="submit()">登录</button>
 		  		</div>
 			</div>
 		</form>

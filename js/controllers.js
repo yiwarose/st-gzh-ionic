@@ -43,11 +43,13 @@
 .controller('FinanceCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal,$state) {
 
 })
-.controller('LoginCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal,$http,$interval,APIURL,stService) {
+.controller('LoginCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal,$http,$interval,$state,APIURL,stService) {
 
     $scope.codeText='获取验证码';
 
     $scope.codeDis=false;
+
+    $scope.loginDis=false;
     
     $scope.loginData = {};
 
@@ -62,9 +64,22 @@
             from:'st-gzh'
         }).then(function success(data){
 
+            //console.log(data.data.code);
+            
             $rootScope.hideLoading();
 
-            $scope.codeTimer();
+            if(data.data.code!='0'){
+
+                $rootScope.showAlert('',data.data.message);
+
+                $scope.codeDis=false;
+
+            }else{
+
+                //$rootScope.showAlert('','验证码发送成功');
+
+                $scope.codeTimer();
+            }
 
         }, function fail(data){
 
@@ -73,6 +88,48 @@
             $scope.codeDis=false;
 
             $rootScope.showAlert('','获取验证码失败，请重试');
+
+        });
+    }
+
+    $scope.submit=function(){
+
+        $rootScope.showLoading();
+
+        $scope.loginDis=true;
+
+        $http.post(APIURL+'auth', {
+            phone:$scope.loginData.handPhone,
+            openid:'',
+            code:$scope.loginData.code,
+            from:'st-gzh'
+        }).then(function success(data){
+
+            $rootScope.hideLoading();
+
+            if(data.data.code!='0'){
+
+                $rootScope.showAlert('',data.data.message);
+
+                $scope.loginDis=false;
+
+            }else{
+
+                localStorage["st.state.token"]=data.data.message;
+
+                localStorage["st.state.phone"]=$scope.loginData.handPhone;
+
+                $state.go("tabs.home.trade", {}, { reload: true });
+
+            }
+
+        }, function fail(data){
+
+            $rootScope.hideLoading();
+
+            $scope.loginDis=false;
+
+            $rootScope.showAlert('','登录失败，请重试');
 
         });
     }

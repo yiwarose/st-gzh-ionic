@@ -12,7 +12,7 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
       StatusBar.styleDefault();
     }
 
-    if(localStorage["st.state.phone"]==undefined || localStorage["st.state.phone"]==""){
+    if(localStorage["st.state.phone"]==undefined || localStorage["st.state.phone"]==""|| localStorage["st.state.token"]==""){
 
       console.log('need to login');
 
