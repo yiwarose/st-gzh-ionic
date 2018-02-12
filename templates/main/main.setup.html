@@ -1,21 +1,21 @@
-<ion-header-bar class="bar bar-header bar-assertive">
+<ion-header-bar class="bar bar-header bar-assertive" align-title="center">
 	<button class="button button-clear" ng-click="goTo('tabs.main')"><i class="icon ion-ios-arrow-left"></i></button>
     <h1 class="title">基本设置</h1>
 </ion-header-bar>
 <ion-view>
 <ion-content class="st-background-gray" ng-controller="SetupCtrl">
 	<div class="list">
-		<div class="item item-icon-left item-icon-right st-font-12" ng-click="goTo('modify');">
+		<div class="item item-icon-left item-icon-right " ng-click="goTo('modify');">
           <i class="icon ion-locked"></i>
           修改密码
           <i class="icon ion-ios-arrow-right"></i>
         </div>
-        <div class="item item-icon-left item-icon-right st-font-12" ng-click="clearCache();">
+        <div class="item item-icon-left item-icon-right " ng-click="clearCache();">
           <i class="icon ion-paintbrush"></i>
           清理缓存
           <i class="icon ion-ios-arrow-right"></i>
         </div>
-        <div class="item item-icon-left item-icon-right st-font-12" ng-click="update();">
+        <div class="item item-icon-left item-icon-right " ng-click="update();">
           <i class="icon ion-earth"></i>
           检测更新
           <i class="icon ion-ios-arrow-right"></i>

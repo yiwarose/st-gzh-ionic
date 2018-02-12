@@ -1,6 +1,6 @@
 body{
 
-	font-size:0.5em;
+
 	font-family: "Microsoft YaHei";
 }
 ul,li,table{
@@ -76,10 +76,7 @@ input[type="number"]{-moz-appearance:textfield;}
 .st-green{
   color:green;
 }
-.st-font-12{
-  font-size:12px;
-  font-size:0.6em;
-}
+
 .st-title{
   font-size:20px;
   height:50px;
