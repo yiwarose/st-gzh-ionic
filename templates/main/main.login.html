@@ -1,6 +1,6 @@
 
 	<ion-header-bar class="bar bar-header bar-assertive" align-title="center">
-   		<h1 class="title">升腾登录</h1>
+   		<h1 class="title">升腾积分平台</h1>
 	</ion-header-bar>
 	<ion-view view-title="登录" class="">
   	<ion-content class="st-background-gray">
@@ -8,15 +8,15 @@
 			<div class="list">
 				<div class="item item-input">
 					<i class="icon ion-iphone" ></i>
-					<input type="text" placeholder="请输入手机号"/>
-				    <button class="button button-stable button-small">获取验证码&nbsp;</button>&nbsp;
+					<input type="number" name="handPhone" ng-model="loginData.handPhone" ng-maxlength="11" ng-minlength="11" placeholder="请输入手机号" required/>
+				    <button class="button button-stable button-small" ng-bind="codeText" ng-disabled="loginForm.handPhone.$invalid||codeDis" ng-click="getCode()"></button>&nbsp;
 				</div>
 				<div class="item item-input">
 					<i class="icon ion-key"></i>
-					<input type="password" placeholder="请输入验证码" class="password"/>
+					<input type="password" name="code" ng-model="loginData.code" ng-maxlength="6" ng-minlength="6" placeholder="请输入验证码" class="password" required/>
 				</div>
 				<div class="item st-border-bottom-none">
-		  			<button class="button button-block button-assertive">登录</button>
+		  			<button class="button button-block button-assertive" ng-disabled="loginForm.handPhone.$invalid||loginForm.code.$invalid" ng-click="submit()">登录</button>
 		  		</div>
 			</div>
 		</form>

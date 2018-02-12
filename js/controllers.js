@@ -43,7 +43,64 @@
 .controller('FinanceCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal,$state) {
 
 })
-.controller('LoginCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal) {
+.controller('LoginCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal,$http,$interval,APIURL,stService) {
+
+    $scope.codeText='获取验证码';
+
+    $scope.codeDis=false;
+    
+    $scope.loginData = {};
+
+    $scope.getCode=function(){
+
+        $rootScope.showLoading();
+
+        $scope.codeDis=true;
+
+        $http.post(APIURL+'xcode', {
+            phone:$scope.loginData.handPhone,
+            from:'st-gzh'
+        }).then(function success(data){
+
+            $rootScope.hideLoading();
+
+            $scope.codeTimer();
+
+        }, function fail(data){
+
+            $rootScope.hideLoading();
+
+            $scope.codeDis=false;
+
+            $rootScope.showAlert('','获取验证码失败，请重试');
+
+        });
+    }
+
+    $scope.codeTimer=function(){
+
+
+            var second = 60;  
+
+                var timePromise = undefined;  
+          
+                timePromise = $interval(function(){  
+                  if(second<=0){  
+                    $interval.cancel(timePromise);  
+                    timePromise = undefined;  
+          
+                    second = 60;  
+                    $scope.codeText = "重发验证码";  
+                    $scope.codeDis=false;
+                  }else{  
+                    $scope.codeText = second + "秒后可重发";  
+                    second--;  
+
+                    $scope.codeDis=true;
+                     
+                  }  
+                },1000,100); 
+      };
 	
 })
 .controller('DailyInfoCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal) {
@@ -53,7 +110,7 @@
 	
 })
 .controller('ServiceRelationCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal) {
-	$scope.icon1 = "icon ion-chevron-right";
+	/*$scope.icon1 = "icon ion-chevron-right";
 	$scope.icon2 = "icon ion-chevron-right";
 	$scope.openSubPage = function(param){
 		if(param==1){
@@ -67,7 +124,7 @@
 			$scope.icon1 = "icon ion-chevron-right";
 			$scope.icon2 = "icon ion-chevron-down";
 		}
-	}
+	}*/
 })
 .controller('AboutUsCtrl', function ($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal) {
 	
@@ -81,8 +138,20 @@
 	
 })
 .controller('MainCtrl',function($scope,$rootScope,$ionicLoading,$ionicActionSheet,$ionicModal,$state){
-	$scope.img = "img/default_avatar.png";
-	$scope.nameInfo = "您还没有登录,请先登录";
+	
+    $scope.img = "img/default_avatar.png";
+	
+    $scope.name = "未登录";
+
+    if(localStorage["st.state.phone"]==undefined || localStorage["st.state.phone"]==""){
+
+      $scope.name = "您还没有登录,请先登录";
+
+    }else{
+
+        $scope.name=localStorage["st.state.userName"];
+    }
+
 	$scope.openLogin = function(){
 		$state.go("login");
 	};
@@ -101,6 +170,19 @@
 		}
 	}*/
  })
+.service('stService', function ($http,APIURL) {
+
+        /*this.getCode=function(phone,from,openId='web'){
+
+            var request=$http.post(APIURL+'xcode',{
+                phone:phone,
+                openid:openId,
+                from:from
+            });
+
+            return request;
+        };*/
+    })
  .factory('$echartsConfig', function () {
      return {
     	 title : {

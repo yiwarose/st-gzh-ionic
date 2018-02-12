@@ -1,19 +1,19 @@
 
 	  <ion-header-bar class="bar bar-header bar-assertive">
         <h1 class="title">个人中心</h1>
-        <button class="button button-clear st-font-10 button-small icon ion-gear-a" ng-click="goTo('setup')"></button>
+        <button class="button button-clear st-font-12 button-small icon ion-gear-a" ng-click="goTo('setup')"></button>
     </ion-header-bar>
     <ion-view class="st-background-gray" ng-controller="MainCtrl">
 	<ion-content>
     <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>
 		<div class="card">
 			<div class="main-background-pic">
-        <div class="st-block-10"></div>
+        <div class="st-block-10"><!----></div>
 				<div class="st-align-center">
 					<img class="st-circle-pic" src="{{img}}" ng-click="openLogin()"/>
-					<div class="st-white">{{nameInfo}}</div>
+					<div class="st-white">{{name}}</div>
 				</div>
-        <div class="st-block-10"></div>
+        <div class="st-block-10"><!----></div>
 			</div>
 			<div class="row">
       			<div class="col col-33 st-align-center">
@@ -47,25 +47,25 @@
             </div>
       </div>
 		</div>
-        <div class="st-block-10"></div>
+        <div class="st-block-10"><!----></div>
         <ion-list>
-            <ion-item href="#/dailyInfo" class="item-icon-right st-font-10 st-gray">
+            <ion-item href="#/dailyInfo" class="item-icon-right st-font-12 st-gray">
                 当日消息
                 <i class="icon ion-ios-arrow-right st-gray"></i>
             </ion-item>
-            <ion-item href="#/accountInfo" class="item-icon-right  st-font-10 st-gray">
+            <ion-item href="#/accountInfo" class="item-icon-right  st-font-12 st-gray">
                 累计账户信息
                 <i class="icon ion-ios-arrow-right st-gray"></i>
             </ion-item>
-            <ion-item href="#/serviceRelation" class="item-icon-right  st-font-10 st-gray">
+            <ion-item href="#/serviceRelation" class="item-icon-right  st-font-12 st-gray">
                 服务关系
                 <i class="icon ion-ios-arrow-right st-gray"></i>
             </ion-item>
-            <ion-item href="#/aboutUs" class="item-icon-right st-font-10 st-gray">
+            <ion-item href="#/aboutUs" class="item-icon-right st-font-12 st-gray">
                 关于我们
                 <i class="icon ion-ios-arrow-right st-gray"></i>
             </ion-item>
         </ion-list>		
-        <div class="st-block-10"></div>
+        <div class="st-block-10"><!----></div>
 	</ion-content>
 </ion-view>	

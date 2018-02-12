@@ -50,9 +50,13 @@ input[type="number"]{-moz-appearance:textfield;}
 }
 .st-block-10{
   height:10px;
+  font-size:1px;
+  line-height: 1px;
 }
 .st-block-20{
   height:20px;
+  font-size:1px;
+  line-height: 1px;
 }
 .st-red{
   color:#ef473a;
@@ -72,9 +76,9 @@ input[type="number"]{-moz-appearance:textfield;}
 .st-green{
   color:green;
 }
-.st-font-10{
-  font-size:10px;
-  font-size:0.5em;
+.st-font-12{
+  font-size:12px;
+  font-size:0.6em;
 }
 .st-title{
   font-size:20px;

@@ -1,7 +1,8 @@
 angular.module('GZH', ['ionic', 'GZH.controllers'])
-.constant('APIURL', 'http://www.st-it.cn/index.php/api/')
-.run(function($ionicPlatform,$rootScope,$ionicLoading,$ionicHistory,$state) {
+.constant('APIURL', 'http://111.231.100.183/index.php/api/')
+.run(function($ionicPlatform,$rootScope,$ionicLoading,$ionicHistory,$state,$ionicPopup,$timeout) {
   $ionicPlatform.ready(function() {
+
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
@@ -10,6 +11,14 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    if(localStorage["st.state.phone"]==undefined || localStorage["st.state.phone"]==""){
+
+      console.log('need to login');
+
+      $state.go("login", {}, { reload: true });
+
+    };
 
   });
 
@@ -21,8 +30,6 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
 
   $rootScope.goTo=function(url){
 
-    //console.log(url);
-
     $state.go(url);
   }
 
@@ -31,6 +38,37 @@ angular.module('GZH', ['ionic', 'GZH.controllers'])
     $rootScope.$broadcast('scroll.refreshComplete');
 
   }
+    $rootScope.showLoading=function() {
+        $ionicLoading.show({
+          content: 'Loading',
+          animation: 'fade-in',
+          showBackdrop: true,
+          maxWidth: 200,
+          showDelay: 0
+        });
+
+    };
+
+    $rootScope.hideLoading= function(){
+
+      $ionicLoading.hide();
+
+    };
+
+  $rootScope.showAlert = function(title,message) {
+            if(title==''){title='提示';}
+             var alertPopup = $ionicPopup.alert({
+               title: title,
+               template: '<div class="st-align-center">'+message+'</div>',
+               buttons:[{
+                text:'确认',
+                type:'button-assertive'
+               }]
+             });
+             alertPopup.then(function(res) {
+               //console.log('Thank you for not eating my delicious ice cream cone');
+             });
+           };
 
 })
 .config(function($stateProvider, $urlRouterProvider,$locationProvider,$ionicConfigProvider) {
